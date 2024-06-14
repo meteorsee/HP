@@ -3,8 +3,8 @@ body {
         font-family: Arial, sans-serif;
 }
 
-/*NavBar*/
-nav {
+/* NavBar*/
+/* nav {
         background-color: darkslategray;
         color: floralwhite;
         padding: 10px 0;
@@ -20,8 +20,8 @@ nav a {
 
 nav a:hover {
         text-decoration: underline;
-}
-/*NavBar*/
+} */
+/*NavBar */
 
 /*Welcome*/
 #welcome {
@@ -40,6 +40,7 @@ nav a:hover {
         max-width: 600px;
         margin: 20px auto;
 }
+
 /*Welcome*/
 
 
@@ -88,6 +89,7 @@ nav a:hover {
 #enterDetails button:hover {
         background-color: gray;
 }
+
 /*EnterDetails*/
 
 /*UpdateDetails*/
@@ -135,6 +137,7 @@ nav a:hover {
 #updateDetails button:hover {
         background-color: gray;
 }
+
 /*UpdateDetails*/
 
 .text-center {

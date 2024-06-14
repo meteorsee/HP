@@ -1,69 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SCSM HP Data Entry</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
+
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="enterDetails.html">Enter Details</a>
-        <a href="findDetails.html">Find Details</a>
-        <a href="updateDetails.html">Update Details</a>
-        <a href="login.html">Logout</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">HP Data Entry</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="enterDetails.html">Enter Details</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="findDetails.html">Find Details</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="updateDetails.html">Update Details</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Logout</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
-    <div id="findDetails" class="text-center">
-        <h1>Find by Case ID</h1>
-        <label for="caseID">Case ID: </label>
-        <input id="findCaseIDInput" type="text"> <br><br>
-        <button id="findBtn">FIND</button>
-        <br><br>
-        <table id="resultsTable" border="1" style="margin: auto; display: none;">
-            <thead>
-                <tr>
-                    <th>Case ID</th>
-                    <th>Work ID</th>
-                    <th>Reference Number</th>
-                    <th>Technician Name</th>
-                    <th>Handler Name</th>
-                    <th>Hardware Parts</th>
-                    <th>Hardware Part Number</th>
-                    <th>Hardware Part Status</th>
-                    <th>AWB Number</th>
-                    <th>MO Number</th>
-                    <th>SO Number</th>
-                    <th>RMA Number</th>
-                    <th>Date Arrived</th>
-                    <th>Date Collected</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td id="findCaseID"></td>
-                    <td id="findWorkID"></td>
-                    <td id="findReferenceNumber"></td>
-                    <td id="findTechnician"></td>
-                    <td id="findHandler"></td>
-                    <td id="findHardwareParts"></td>
-                    <td id="findHardwarePartNumber"></td>
-                    <td id="findHardwarePartStatus"></td>
-                    <td id="findAWBNumber"></td>
-                    <td id="findMONumber"></td>
-                    <td id="findSONumber"></td>
-                    <td id="findRMANumber"></td>
-                    <td id="findDateArrived"></td>
-                    <td id="findDateCollected"></td>
-                </tr>
-            </tbody>
-        </table>
+    <div id="findDetails" class="container mt-5">
+        <div class="text-center">
+            <h1>Find by Case ID</h1>
+            <form class="form-inline justify-content-center">
+                <label class="sr-only" for="caseID">Case ID:</label>
+                <input id="findCaseIDInput" type="text" class="form-control mb-2 mr-sm-2" placeholder="Enter Case ID">
+
+                <button id="findBtn" type="button" class="btn btn-primary mb-2">FIND</button>
+            </form>
+
+            <div id="resultsTable" class="table-responsive mt-4" style="display: none;">
+                <table class="table table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Case ID</th>
+                            <th>Work ID</th>
+                            <th>Reference Number</th>
+                            <th>Technician Name</th>
+                            <th>Handler Name</th>
+                            <th>Hardware Parts</th>
+                            <th>Hardware Part Number</th>
+                            <th>Hardware Part Status</th>
+                            <th>AWB Number</th>
+                            <th>MO Number</th>
+                            <th>SO Number</th>
+                            <th>RMA Number</th>
+                            <th>Date Arrived</th>
+                            <th>Date Collected</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="findCaseID"></td>
+                            <td id="findWorkID"></td>
+                            <td id="findReferenceNumber"></td>
+                            <td id="findTechnician"></td>
+                            <td id="findHandler"></td>
+                            <td id="findHardwareParts"></td>
+                            <td id="findHardwarePartNumber"></td>
+                            <td id="findHardwarePartStatus"></td>
+                            <td id="findAWBNumber"></td>
+                            <td id="findMONumber"></td>
+                            <td id="findSONumber"></td>
+                            <td id="findRMANumber"></td>
+                            <td id="findDateArrived"></td>
+                            <td id="findDateCollected"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 
+    <!-- Bootstrap JS and other scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
     <script type="module" src="./assets/js/findData.js"></script>
     <script type="module" src="./assets/js/credentials.js" defer></script>
 </body>
+
 </html>
