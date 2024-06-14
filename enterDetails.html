@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSM HP Data Entry</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="enterDetails.html">Enter Details</a>
+        <a href="findDetails.html">Find Details</a>
+        <a href="updateDetails.html">Update Details</a>
+        <a href="login.html">Logout</a>
+    </nav>
+    
+    <h1>HP Data Entry</h1>
+    <div id="enterDetails" class="text-center">
+        <h1>Enter details</h1>
+
+        <label for="caseID">Case ID</label> 
+        <input id="enterCaseID" type="text"> 
+
+        <label for="workID">Work ID</label> 
+        <input id="enterWorkID" type="text"> 
+
+        <label for="referenceNumber">Reference Number</label> 
+        <input id="enterReferenceNumber" type="text"> 
+
+        <label for="technicianName">Technician Name</label> 
+        <input id="enterTechnician" type="text">
+
+        <label for="handlerName">Handler Name</label> 
+        <input id="enterHandler" type="text"> 
+
+        <label for="hardwareParts">Hardware Parts</label> 
+        <input id="enterHardwareParts" type="text"> 
+
+        <label for="hardwarePartNumber">Hardware Part Number</label> 
+        <input id="enterHardwarePartNumber" type="text"> 
+
+        <label for="hardwarePartStatus">Hardware Part Status</label> 
+        <select id="enterHardwarePartStatus">
+            <option value="DOA">DOA</option>
+            <option value="Good">Good</option>
+            <option value="Bad">Bad</option>
+        </select>
+
+        <label for="awbNumber">AWB Number</label> 
+        <input id="enterAWBNumber" type="text"> 
+
+        <label for="moNumber">MO Number</label> 
+        <input id="enterMONumber" type="text"> 
+
+        <label for="soNumber">SO Number</label> 
+        <input id="enterSONumber" type="text"> 
+
+        <label for="rmaNumber">RMA Number</label> 
+        <input id="enterRMANumber" type="text"> 
+
+        <label for="dateArrived">Date Arrived</label> 
+        <input id="enterDateArrived" type="date"> 
+
+        <label for="dateCollected">Date Collected by Technician</label> 
+        <input id="enterDateCollected" type="date"> <br><br>
+
+        <button id="insert">INSERT</button>
+        <!-- <button id="update">UPDATE</button>
+        <button id="remove">REMOVE</button> <br><br> -->
+    </div>
+
+    <script type="module" src="./assets/js/enterData.js"></script>
+    <script type="module" src="./assets/js/credentials.js" defer></script>
+
+</body>
+</html>

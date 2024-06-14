@@ -1,0 +1,142 @@
+body {
+        text-align: center;
+        font-family: Arial, sans-serif;
+}
+
+/*NavBar*/
+nav {
+        background-color: darkslategray;
+        color: floralwhite;
+        padding: 10px 0;
+        text-align: center;
+}
+
+nav a {
+        color: floralwhite;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 18px;
+}
+
+nav a:hover {
+        text-decoration: underline;
+}
+/*NavBar*/
+
+/*Welcome*/
+#welcome {
+        text-align: center;
+        margin-top: 50px;
+}
+
+#welcome h2 {
+        font-size: 28px;
+        color: darkslategray;
+}
+
+#welcome p {
+        font-size: 18px;
+        color: gray;
+        max-width: 600px;
+        margin: 20px auto;
+}
+/*Welcome*/
+
+
+/*EnterDetails*/
+#enterDetails {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: darkslategray;
+        color: floralwhite;
+        padding: 20px;
+        margin: 20px auto;
+        border-radius: 10px;
+        width: 80%;
+        max-width: 600px;
+}
+
+#enterDetails h1 {
+        margin-bottom: 20px;
+}
+
+#enterDetails h4 {
+        margin: 10px 0 5px;
+}
+
+#enterDetails input {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+}
+
+#enterDetails button {
+        padding: 10px 20px;
+        margin: 10px 5px;
+        border: none;
+        border-radius: 5px;
+        background-color: darkslategray;
+        color: floralwhite;
+        cursor: pointer;
+        font-size: 16px;
+}
+
+#enterDetails button:hover {
+        background-color: gray;
+}
+/*EnterDetails*/
+
+/*UpdateDetails*/
+#updateDetails {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: darkslategray;
+        color: floralwhite;
+        padding: 20px;
+        margin: 20px auto;
+        border-radius: 10px;
+        width: 80%;
+        max-width: 600px;
+}
+
+#updateDetails h1 {
+        margin-bottom: 20px;
+}
+
+#updateDetails h4 {
+        margin: 10px 0 5px;
+}
+
+#updateDetails input {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+}
+
+#updateDetails button {
+        padding: 10px 20px;
+        margin: 10px 5px;
+        border: none;
+        border-radius: 5px;
+        background-color: darkslategray;
+        color: floralwhite;
+        cursor: pointer;
+        font-size: 16px;
+}
+
+#updateDetails button:hover {
+        background-color: gray;
+}
+/*UpdateDetails*/
+
+.text-center {
+        text-align: center;
+}
