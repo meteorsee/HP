@@ -21,12 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
     var enterReferenceNumber = document.querySelector("#enterReferenceNumber");
     var enterTechnician = document.querySelector("#enterTechnician");
     var enterHandler = document.querySelector("#enterHandler");
-    var enterHardwareParts = document.querySelector("#enterHardwareParts");
     var enterHardwarePartNumber = document.querySelector("#enterHardwarePartNumber");
     var enterHardwarePartStatus = document.querySelector("#enterHardwarePartStatus");
     var enterAWBNumber = document.querySelector("#enterAWBNumber");
     var enterMONumber = document.querySelector("#enterMONumber");
-    var enterSONumber = document.querySelector("#enterSONumber");
+    var enterHPOrderNumber = document.querySelector("#enterHPOrderNumber");
     var enterRMANumber = document.querySelector("#enterRMANumber");
     var enterDateArrived = document.querySelector("#enterDateArrived");
     var enterDateCollected = document.querySelector("#enterDateCollected");
@@ -47,24 +46,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function InsertData() {
         if (!validateInputs(
-                enterCaseID, enterWorkID, enterReferenceNumber, enterTechnician, 
-                enterHandler, enterHardwareParts, enterHardwarePartNumber, 
+                enterCaseID, enterWorkID, enterTechnician, 
+                enterHandler, enterHardwarePartNumber, 
                 enterHardwarePartStatus, enterAWBNumber, enterMONumber, 
-                enterSONumber, enterRMANumber, enterDateArrived,
+                enterHPOrderNumber, enterRMANumber, enterDateArrived,
             )) return;
 
         set(ref(db, "Data/" + enterCaseID.value), {
             CaseID: enterCaseID.value,
             WorkID: enterWorkID.value,
-            ReferenceNumber: enterReferenceNumber.value,
             TechnicianName: enterTechnician.value,
             HandlerName: enterHandler.value,
-            HardwareParts: enterHardwareParts.value,
             HardwarePartNumber: enterHardwarePartNumber.value,
             HardwarePartStatus: enterHardwarePartStatus.value,
             AWBNumber: enterAWBNumber.value,
             MONumber: enterMONumber.value,
-            SONumber: enterSONumber.value,
+            HPOrderNumber: enterHPOrderNumber.value,
             RMANumber: enterRMANumber.value,
             DateArrived: enterDateArrived.value,
             DateCollected: enterDateCollected.value
