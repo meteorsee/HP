@@ -50,83 +50,95 @@
                         <h1>Enter Details</h1>
                     </div>
                     <div class="card-body">
-                        <form id="enterDetailsForm">
-                            <div class="form-group">
-                                <label for="enterCaseID">Case ID</label>
-                                <input type="text" class="form-control" id="enterCaseID" required>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="enterCaseID">Case ID</label>
+                                    <input type="text" class="form-control" id="enterCaseID" required>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label for="enterWorkID">Work ID</label>
+                                    <input type="text" class="form-control" id="enterWorkID" required>
+                                </div>
                             </div>
 
-                            <div class="form-group">
-                                <label for="enterWorkID">Work ID</label>
-                                <input type="text" class="form-control" id="enterWorkID" required>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="enterReferenceNumber">Reference Number</label>
+                                    <input type="text" class="form-control" id="enterReferenceNumber">
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label for="enterTechnician">Technician Name</label>
+                                    <input type="text" class="form-control" id="enterTechnician">
+                                </div>
                             </div>
 
-                            <div class="form-group">
-                                <label for="enterReferenceNumber">Reference Number</label>
-                                <input type="text" class="form-control" id="enterReferenceNumber">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="enterHandler">Handler Name</label>
+                                    <input type="text" class="form-control" id="enterHandler">
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label for="enterHardwareParts">Hardware Parts</label>
+                                    <input type="text" class="form-control" id="enterHardwareParts">
+                                </div>
                             </div>
 
-                            <div class="form-group">
-                                <label for="enterTechnician">Technician Name</label>
-                                <input type="text" class="form-control" id="enterTechnician">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="enterHardwarePartNumber">Hardware Part Number</label>
+                                    <input type="text" class="form-control" id="enterHardwarePartNumber">
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label for="enterHardwarePartStatus">Hardware Part Status</label>
+                                    <select class="form-control" id="enterHardwarePartStatus">
+                                        <option value="DOA">DOA</option>
+                                        <option value="Good">Good</option>
+                                        <option value="Bad">Bad</option>
+                                    </select>
+                                </div>
                             </div>
 
-                            <div class="form-group">
-                                <label for="enterHandler">Handler Name</label>
-                                <input type="text" class="form-control" id="enterHandler">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="enterAWBNumber">AWB Number</label>
+                                    <input type="text" class="form-control" id="enterAWBNumber">
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label for="enterMONumber">MO Number</label>
+                                    <input type="text" class="form-control" id="enterMONumber">
+                                </div>
                             </div>
 
-                            <div class="form-group">
-                                <label for="enterHardwareParts">Hardware Parts</label>
-                                <input type="text" class="form-control" id="enterHardwareParts">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="enterSONumber">SO Number</label>
+                                    <input type="text" class="form-control" id="enterSONumber">
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label for="enterRMANumber">RMA Number</label>
+                                    <input type="text" class="form-control" id="enterRMANumber">
+                                </div>
                             </div>
 
-                            <div class="form-group">
-                                <label for="enterHardwarePartNumber">Hardware Part Number</label>
-                                <input type="text" class="form-control" id="enterHardwarePartNumber">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="enterDateArrived">Date Arrived</label>
+                                    <input type="date" class="form-control" id="enterDateArrived">
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label for="enterDateCollected">Date Collected by Technician</label>
+                                    <input type="date" class="form-control" id="enterDateCollected">
+                                </div>
                             </div>
 
-                            <div class="form-group">
-                                <label for="enterHardwarePartStatus">Hardware Part Status</label>
-                                <select class="form-control" id="enterHardwarePartStatus">
-                                    <option value="DOA">DOA</option>
-                                    <option value="Good">Good</option>
-                                    <option value="Bad">Bad</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="enterAWBNumber">AWB Number</label>
-                                <input type="text" class="form-control" id="enterAWBNumber">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="enterMONumber">MO Number</label>
-                                <input type="text" class="form-control" id="enterMONumber">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="enterSONumber">SO Number</label>
-                                <input type="text" class="form-control" id="enterSONumber">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="enterRMANumber">RMA Number</label>
-                                <input type="text" class="form-control" id="enterRMANumber">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="enterDateArrived">Date Arrived</label>
-                                <input type="date" class="form-control" id="enterDateArrived">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="enterDateCollected">Date Collected by Technician</label>
-                                <input type="date" class="form-control" id="enterDateCollected">
-                            </div>
-
-                            <button type="submit" class="btn btn-primary" id="insert">INSERT</button>
-                        </form>
+                            <button id="insert" type="submit" class="btn btn-primary" >INSERT</button>
                     </div>
                 </div>
             </div>
