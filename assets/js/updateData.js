@@ -18,15 +18,13 @@ const db = getDatabase(app);
 document.addEventListener('DOMContentLoaded', () => {
     const updateCaseIDInput = document.querySelector("#updateCaseIDInput");
     const enterWorkID = document.querySelector("#enterWorkID");
-    const enterReferenceNumber = document.querySelector("#enterReferenceNumber");
     const enterTechnician = document.querySelector("#enterTechnician");
     const enterHandler = document.querySelector("#enterHandler");
-    const enterHardwareParts = document.querySelector("#enterHardwareParts");
     const enterHardwarePartNumber = document.querySelector("#enterHardwarePartNumber");
     const enterHardwarePartStatus = document.querySelector("#enterHardwarePartStatus");
     const enterAWBNumber = document.querySelector("#enterAWBNumber");
     const enterMONumber = document.querySelector("#enterMONumber");
-    const enterSONumber = document.querySelector("#enterSONumber");
+    const enterHPOrderNumber = document.querySelector("#enterHPOrderNumber");
     const enterRMANumber = document.querySelector("#enterRMANumber");
     const enterDateArrived = document.querySelector("#enterDateArrived");
     const enterDateCollected = document.querySelector("#enterDateCollected");
@@ -47,15 +45,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (snapshot.exists()) {
                     const data = snapshot.val();
                     enterWorkID.value = data.WorkID || "";
-                    enterReferenceNumber.value = data.ReferenceNumber || "";
                     enterTechnician.value = data.TechnicianName || "";
                     enterHandler.value = data.HandlerName || "";
-                    enterHardwareParts.value = data.HardwareParts || "";
                     enterHardwarePartNumber.value = data.HardwarePartNumber || "";
                     enterHardwarePartStatus.value = data.HardwarePartStatus || "";
                     enterAWBNumber.value = data.AWBNumber || "";
                     enterMONumber.value = data.MONumber || "";
-                    enterSONumber.value = data.SONumber || "";
+                    enterHPOrderNumber.value = data.HPOrderNumber || "";
                     enterRMANumber.value = data.RMANumber || "";
                     enterDateArrived.value = data.DateArrived || "";
                     enterDateCollected.value = data.DateCollected || "";
@@ -77,15 +73,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             update(child(dbref, "Data/" + updateCaseIDInput.value), {
                 WorkID: enterWorkID.value,
-                ReferenceNumber: enterReferenceNumber.value,
                 TechnicianName: enterTechnician.value,
                 HandlerName: enterHandler.value,
-                HardwareParts: enterHardwareParts.value,
                 HardwarePartNumber: enterHardwarePartNumber.value,
                 HardwarePartStatus: enterHardwarePartStatus.value,
                 AWBNumber: enterAWBNumber.value,
                 MONumber: enterMONumber.value,
-                SONumber: enterSONumber.value,
+                HPOrderNumber: enterHPOrderNumber.value,
                 RMANumber: enterRMANumber.value,
                 DateArrived: enterDateArrived.value,
                 DateCollected: enterDateCollected.value
@@ -118,15 +112,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function clearFormFields() {
         enterWorkID.value = "";
-        enterReferenceNumber.value = "";
         enterTechnician.value = "";
         enterHandler.value = "";
-        enterHardwareParts.value = "";
         enterHardwarePartNumber.value = "";
         enterHardwarePartStatus.value = "";
         enterAWBNumber.value = "";
         enterMONumber.value = "";
-        enterSONumber.value = "";
+        enterHPOrderNumber.value = "";
         enterRMANumber.value = "";
         enterDateArrived.value = "";
         enterDateCollected.value = "";
