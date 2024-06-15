@@ -3,27 +3,6 @@ body {
         font-family: Arial, sans-serif;
 }
 
-
-/* NavBar*/
-/* nav {
-        background-color: darkslategray;
-        color: floralwhite;
-        padding: 10px 0;
-        text-align: center;
-}
-
-nav a {
-        color: floralwhite;
-        text-decoration: none;
-        margin: 0 15px;
-        font-size: 18px;
-}
-
-nav a:hover {
-        text-decoration: underline;
-} */
-/*NavBar */
-
 /*Welcome*/
 #welcome {
         text-align: center;
