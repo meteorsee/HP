@@ -18,7 +18,6 @@ const db = getDatabase(app);
 document.addEventListener('DOMContentLoaded', () => {
     var enterCaseID = document.querySelector("#enterCaseID");
     var enterWorkID = document.querySelector("#enterWorkID");
-    var enterReferenceNumber = document.querySelector("#enterReferenceNumber");
     var enterTechnician = document.querySelector("#enterTechnician");
     var enterHandler = document.querySelector("#enterHandler");
     var enterHardwarePartNumber = document.querySelector("#enterHardwarePartNumber");
@@ -31,8 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     var enterDateCollected = document.querySelector("#enterDateCollected");
 
     var insertBtn = document.querySelector("#insert");
-    var updateBtn = document.querySelector("#update");
-    var removeBtn = document.querySelector("#remove");
+
 
     function validateInputs(...inputs) {
         for (let input of inputs) {
@@ -75,102 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // function UpdateData() {
-    //     if (!validateInputs(
-    //             enterCaseID, enterWorkID, enterReferenceNumber, enterTechnician, 
-    //             enterHandler, enterHardwareParts, enterHardwarePartNumber, 
-    //             enterHardwarePartStatus, enterAWBNumber, enterMONumber, 
-    //             enterSONumber, enterRMANumber, enterDateArrived, 
-    //         )) return;
-
-    //     const dbref = ref(db);
-
-    //     get(child(dbref, "Data/" + enterCaseID.value))
-    //         .then((snapshot) => {
-    //             if (snapshot.exists()) {
-    //                 if (confirm("Are you sure you want to update this record?")) {
-    //                     update(ref(db, "Data/" + enterCaseID.value), {
-    //                         WorkID: enterWorkID.value,
-    //                         ReferenceNumber: enterReferenceNumber.value,
-    //                         TechnicianName: enterTechnician.value,
-    //                         HandlerName: enterHandler.value,
-    //                         HardwareParts: enterHardwareParts.value,
-    //                         HardwarePartNumber: enterHardwarePartNumber.value,
-    //                         HardwarePartStatus: enterHardwarePartStatus.value,
-    //                         AWBNumber: enterAWBNumber.value,
-    //                         MONumber: enterMONumber.value,
-    //                         SONumber: enterSONumber.value,
-    //                         RMANumber: enterRMANumber.value,
-    //                         DateArrived: enterDateArrived.value,
-    //                         DateCollected: enterDateCollected.value
-    //                     })
-    //                     .then(() => {
-    //                         alert("Data updated successfully");
-    //                         location.reload(true); // true parameter forces reloading from the server instead of cache
-    //                     })
-    //                     .catch((error) => {
-    //                         alert(error);
-    //                     });
-    //                 } else {
-    //                     alert("Update action canceled.");
-    //                 }
-    //             } else {
-    //                 alert("No data found to update");
-    //             }
-    //         })
-    //         .catch((error) => {
-    //             alert(error);
-    //         });
-    // }
-
-    // function RemoveData() {
-    //     if (!enterCaseID.value) {
-    //         alert("Please enter the Case ID to remove");
-    //         return;
-    //     }
-
-    //     const dbref = ref(db);
-
-    //     get(child(dbref, "Data/" + enterCaseID.value))
-    //         .then((snapshot) => {
-    //             if (snapshot.exists()) {
-    //                 if (confirm("Are you sure you want to delete this record?")) {
-    //                     remove(ref(db, "Data/" + enterCaseID.value))
-    //                         .then(() => {
-    //                             alert("Data deleted successfully");
-    //                             // Optionally clear input fields or update UI after deletion
-    //                             enterCaseID.value = "";
-    //                             enterWorkID.value = "";
-    //                             enterReferenceNumber.value = "";
-    //                             enterTechnician.value = "";
-    //                             enterHandler.value = "";
-    //                             enterHardwareParts.value = "";
-    //                             enterHardwarePartNumber.value = "";
-    //                             enterHardwarePartStatus.value = "";
-    //                             enterAWBNumber.value = "";
-    //                             enterMONumber.value = "";
-    //                             enterSONumber.value = "";
-    //                             enterRMANumber.value = "";
-    //                             enterDateArrived.value = "";
-    //                             enterDateCollected.value = "";
-    //                             location.reload(true); // true parameter forces reloading from the server instead of cache
-    //                         })
-    //                         .catch((error) => {
-    //                             alert(error);
-    //                         });
-    //                 } else {
-    //                     alert("Delete action canceled.");
-    //                 }
-    //             } else {
-    //                 alert("No data found to delete");
-    //             }
-    //         })
-    //         .catch((error) => {
-    //             alert(error);
-    //         });
-    // }
-
+   
     insertBtn.addEventListener('click', InsertData);
-    // updateBtn.addEventListener('click', UpdateData);
-    // removeBtn.addEventListener('click', RemoveData);
+    
 });
